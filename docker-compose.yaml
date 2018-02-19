@@ -25,11 +25,15 @@ services:
         - ./compose-config
    nodemanager:
       image: flokkr/hadoop-yarn-nodemanager:latest
-      ports:
-         - 19888:19888
-         - 10020:10020
       links:
          - resourcemanager
          - namenode
+      env_file:
+        - ./compose-config
+    jobhistory:
+      image: jbourne/hadoop-hdfs-jobhistory
+      ports:
+         - 19888:19888
+         - 10020:10020
       env_file:
         - ./compose-config
