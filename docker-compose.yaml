@@ -30,7 +30,7 @@ services:
          - namenode
       env_file:
         - ./compose-config
-    jobhistory:
+   jobhistory:
       image: jbourne/hadoop-hdfs-jobhistory
       ports:
          - 19888:19888
