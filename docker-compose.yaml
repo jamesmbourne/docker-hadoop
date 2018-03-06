@@ -15,7 +15,7 @@ services:
     env_file:
       - ./compose-config
   resourcemanager:
-    image: 'flokkr/hadoop-yarn-resourcemanager:latest'
+    image: 'jbourne/resourcemanager-experiment:latest'
     hostname: resourcemanager
     ports:
       - '8088:8088'
