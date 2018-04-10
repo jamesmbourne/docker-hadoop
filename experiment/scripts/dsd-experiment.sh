@@ -5,7 +5,7 @@ set -o pipefail
 DATA_ROWS=$1
 
 echo "Cleaning hdfs..."
-hdfs dfs -rm -r /tera
+hdfs dfs -rm -r -f -skipTrash /tera
 
 
 MAPRED_EXAMPLES="/opt/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.0.0.jar"
