@@ -26,7 +26,9 @@ S3Upload(){
 
     FILE_TO_UPLOAD=$1
     BUCKET="sc14jb"
-    STARTS_WITH="dsd/${DATA_ROWS}/$2"
+    CPU_COUNT=$(grep -c ^processor /proc/cpuinfo)
+
+    STARTS_WITH="dsd/${CPU_COUNT}/${DATA_ROWS}/$2"
 
     REQUEST_TIME=$(date +"%Y%m%dT%H%M%SZ")
     REQUEST_REGION="eu-west-2"
@@ -62,7 +64,6 @@ MainExperiment(){
     
     echo "Cleaning hdfs..."
     hdfs dfs -rm -r -f -skipTrash /tera
-
 
     MAPRED_EXAMPLES="/opt/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.0.0.jar"
 

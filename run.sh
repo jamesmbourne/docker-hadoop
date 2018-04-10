@@ -1,0 +1,1 @@
+docker-compose exec resourcemanager bash -c 'dsd-experiment.sh 5 1000 10000 100000 1000000 10000000 100000000'
