@@ -21,6 +21,9 @@ services:
       - '8088:8088'
     env_file:
       - ./compose-config
+    environment:
+      - AWS_SECRET=${AWS_SECRET}
+      - AWS_ACCESS=${AWS_ACCESS}
   nodemanager:
     image: 'flokkr/hadoop-yarn-nodemanager:latest'
     env_file:

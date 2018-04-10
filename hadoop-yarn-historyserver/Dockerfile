@@ -1,2 +1,2 @@
 FROM flokkr/hadoop:latest
-CMD ["/opt/hadoop/bin/yarn timelineserver"]
+CMD ["/opt/hadoop/bin/mapred historyserver"]
