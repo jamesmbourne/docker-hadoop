@@ -24,6 +24,7 @@ services:
     environment:
       - AWS_SECRET=${AWS_SECRET}
       - AWS_ACCESS=${AWS_ACCESS}
+      - CONTAINER_SCALE=${CONTAINER_SCALE}
   nodemanager:
     image: 'flokkr/hadoop-yarn-nodemanager:latest'
     env_file:
